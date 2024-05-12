@@ -196,7 +196,7 @@ where
     /// let mut files = Files::new();
     /// let file_id = files.add("test", source);
     ///
-    /// assert_eq!(files.source_span(file_id), Span::from_str(source));
+    /// assert_eq!(files.source_span(file_id), Span::from_string(source));
     /// ```
     pub fn source_span(&self, file_id: FileId) -> Span {
         self.get(file_id).source_span()
@@ -355,7 +355,7 @@ where
     }
 
     pub fn source_span(&self) -> Span {
-        Span::from_str(self.source.as_ref())
+        Span::from_string(self.source.as_ref())
     }
 
     pub fn source_slice(&self, span: Span) -> Result<&str, Error> {

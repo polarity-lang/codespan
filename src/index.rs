@@ -33,6 +33,7 @@ impl LineIndex {
     }
 }
 
+#[allow(clippy::derivable_impls)]
 impl Default for LineIndex {
     fn default() -> LineIndex {
         LineIndex(0)
@@ -82,6 +83,7 @@ impl fmt::Display for LineNumber {
 #[derive(Clone, Copy, PartialEq, Eq, Hash, PartialOrd, Ord)]
 pub struct LineOffset(pub RawOffset);
 
+#[allow(clippy::derivable_impls)]
 impl Default for LineOffset {
     fn default() -> LineOffset {
         LineOffset(0)
@@ -125,6 +127,7 @@ impl ColumnIndex {
     }
 }
 
+#[allow(clippy::derivable_impls)]
 impl Default for ColumnIndex {
     fn default() -> ColumnIndex {
         ColumnIndex(0)
@@ -167,6 +170,7 @@ impl fmt::Display for ColumnNumber {
 #[derive(Clone, Copy, PartialEq, Eq, Hash, PartialOrd, Ord)]
 pub struct ColumnOffset(pub RawOffset);
 
+#[allow(clippy::derivable_impls)]
 impl Default for ColumnOffset {
     fn default() -> ColumnOffset {
         ColumnOffset(0)
@@ -198,6 +202,7 @@ impl ByteIndex {
     }
 }
 
+#[allow(clippy::derivable_impls)]
 impl Default for ByteIndex {
     fn default() -> ByteIndex {
         ByteIndex(0)
