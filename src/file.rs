@@ -416,5 +416,4 @@ mod test {
 
         assert_eq!(line_sources, ["foo\n", "bar\r\n", "\n", "baz"],);
     }
-
 }
