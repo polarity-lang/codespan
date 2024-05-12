@@ -4,7 +4,7 @@
 
 use std::ops::Range;
 
-use codespan::files::{Error, Files};
+use crate::files::{Error, Files};
 
 // WARNING: Be extremely careful when adding new imports here, as it could break
 // the compatible version range that we claim in our `Cargo.toml`. This could
@@ -139,7 +139,7 @@ where
 
 #[cfg(test)]
 mod tests {
-    use codespan::files::{Location, SimpleFiles};
+    use crate::files::{Location, SimpleFiles};
 
     use super::*;
 

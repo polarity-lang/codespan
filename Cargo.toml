@@ -1,6 +1,5 @@
 [workspace]
 members = [
     "./codespan",
-    "./codespan-lsp",
 ]
 resolver = "2"
