@@ -33,11 +33,11 @@ impl Span {
     /// ```rust
     /// use codespan::{ByteIndex, Span};
     ///
-    /// let span = Span::from_str("hello");
+    /// let span = Span::from_string("hello");
     ///
     /// assert_eq!(span, Span::new(0, 5));
     /// ```
-    pub fn from_str(s: &str) -> Span {
+    pub fn from_string(s: &str) -> Span {
         Span::new(0, s.len() as u32)
     }
 
