@@ -1,5 +1,3 @@
-#[cfg(feature = "serialization")]
-use serde::{Deserialize, Serialize};
 use std::ffi::{OsStr, OsString};
 use std::num::NonZeroU32;
 
@@ -8,7 +6,6 @@ use crate::{ByteIndex, ColumnIndex, LineIndex, LineOffset, Location, RawIndex, S
 
 /// A handle that points to a file in the database.
 #[derive(Copy, Clone, Debug, PartialEq, Eq, PartialOrd, Ord, Hash)]
-#[cfg_attr(feature = "serialization", derive(Deserialize, Serialize))]
 pub struct FileId(NonZeroU32);
 
 impl FileId {
@@ -256,11 +253,6 @@ where
 
 /// A file that is stored in the database.
 #[derive(Debug, Clone)]
-// `Serialize` is only implemented on `OsString` for windows/unix
-#[cfg_attr(
-    all(feature = "serialization", any(windows, unix)),
-    derive(Deserialize, Serialize)
-)]
 pub struct File<Source> {
     /// The name of the file.
     pub name: OsString,
