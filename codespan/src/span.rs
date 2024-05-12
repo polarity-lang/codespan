@@ -1,12 +1,9 @@
-#[cfg(feature = "serialization")]
-use serde::{Deserialize, Serialize};
 use std::fmt;
 use std::ops::Range;
 
 use crate::{ByteIndex, RawIndex};
 
 #[derive(Debug, Copy, Clone, PartialEq, Eq, PartialOrd, Ord, Hash)]
-#[cfg_attr(feature = "serialization", derive(Deserialize, Serialize))]
 pub struct Span {
     start: ByteIndex,
     end: ByteIndex,

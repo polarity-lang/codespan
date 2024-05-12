@@ -1,11 +1,7 @@
-#[cfg(feature = "serialization")]
-use serde::{Deserialize, Serialize};
-
 use crate::{ColumnIndex, LineIndex};
 
 /// A location in a source file.
 #[derive(Copy, Clone, Debug, PartialEq, Eq, PartialOrd, Ord, Hash)]
-#[cfg_attr(feature = "serialization", derive(Deserialize, Serialize))]
 pub struct Location {
     /// The line index in the source file.
     pub line: LineIndex,
