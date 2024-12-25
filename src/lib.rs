@@ -15,7 +15,6 @@ mod file;
 pub mod files;
 mod index;
 mod location;
-pub mod lsp_utils;
 mod span;
 
 pub use crate::file::File;
